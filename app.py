@@ -1,8 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS 
 import requests
 
 app = Flask(__name__)
-
+CORS(app)
 GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwWM6_kaFaTTAqWga7n3K-kKQXrxwKiVm8VVfWX-4RI4q--OrXcxAGuGREU2Q_RZA8Uxw/exec"
 
 @app.route('/rsvp-proxy', methods=['POST'])
